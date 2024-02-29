@@ -1,6 +1,6 @@
-const dns = require('dns');
+import dns from "dns"
 
 dns.resolveSrv('nodejs.org', (err, records) => {
-	if(err) throw err;
+	if(err) console.log(err);
 	console.log(records);
 });

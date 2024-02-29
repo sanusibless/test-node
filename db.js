@@ -1,9 +1,9 @@
-var mysql = require('mysql');
+import mysql from "mysql";
 
 let dbDetails = {
 	host: '127.0.0.1',
 	user: 'root',
-	database: 'quiz',
+	database: 'zay',
 	password: '',
 }
 

@@ -1,4 +1,4 @@
-const { EventEmitter, errorMonitor } = require('events');
+import { EventEmitter, errorMonitor } from "events"
 
 class MyEmitter extends EventEmitter {};
 class ErrorEmmiter {

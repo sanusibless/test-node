@@ -27,8 +27,8 @@ class Dictionary {
   }
 
   clear() {
-    for(const key of Object.keys(this.data)){
-      delete this.data[key];
-    }   
+    this.data = [];
+    return true;
   }
+
 }

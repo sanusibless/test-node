@@ -1,4 +1,4 @@
-const { open } = require('fs/promises');
+import { open } from 'fs/promises';
 
 
 async function openingFile(filePath, mode) {
@@ -15,11 +15,11 @@ async function openingFile(filePath, mode) {
 	}
 }
 
-async function readContent(filePath) {
+async function readContent(filePath, mode) {
 	let filehandle;
 	try {
 		filehandle = await open(filePath, mode);
-		filehandle.readFile(
+		console.log(filehandle.readFile())
 		filehandle?.close();
 	} catch (err) {
 		console.log(err.message);
@@ -27,4 +27,4 @@ async function readContent(filePath) {
 	}
 }
 openingFile('tmp/hello.txt', 'w')
-
+readContent('tmp/hello.txt', 'r')
